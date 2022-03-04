@@ -10,4 +10,4 @@ spec:
     app: wordpress
     tier: frontend
   ports:
-    - port: 81
+    - port: 80

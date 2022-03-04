@@ -30,7 +30,7 @@ spec:
               name: mysql-secret
               key: password
         ports:
-        - containerPort: 81
+        - containerPort: 80
           name: wordpress
         volumeMounts:
         - name: wordpress-persistent-storage-lab
