@@ -13,11 +13,3 @@ spec:
   storageClassName: local-storage
   local:
     path: /data/pv-mysql
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - minikube
