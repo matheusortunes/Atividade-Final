@@ -14,4 +14,4 @@ spec:
           service:
             name: wordpress-svc
             port: 
-              number: 80
+              number: 81
