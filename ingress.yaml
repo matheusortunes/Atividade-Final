@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: wordpress-ingress
-  namespace: projetocompass  
+  namespace: projetocompass
 spec:
   rules:
   - host: projetofinal.compass.uol
