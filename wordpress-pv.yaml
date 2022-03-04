@@ -9,5 +9,5 @@ spec:
   accessModes:
   - ReadWriteOnce
   storageClassName: local-storage
-  hostPath:
-    path: /tmp/hostpath_pv
+  local:
+    path: /data/pv-wordpress
