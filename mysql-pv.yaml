@@ -10,4 +10,4 @@ spec:
   - ReadWriteOnce
   storageClassName: local-storage
   hostPath:
-    path: /data/pv-mysql
+    path: /tmp/hostpath-provisioner
