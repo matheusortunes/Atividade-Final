@@ -6,9 +6,9 @@ metadata:
   labels:
     app: wordpress
 spec:
+  storageClassName: local-storage
   accessModes:
     - ReadWriteOnce
-  storageClassName: local-storage
   resources:
     requests:
       storage: 3Gi

@@ -30,16 +30,10 @@ spec:
         ports:
         - containerPort: 3308
           name: mysql
-        securityContext:
-          privileged: true 
         volumeMounts:
-        - name: hostpath-privileged
+        - name: mysql-persistent-storage-lab
           mountPath: /var/lib/mysql
-      securityContext: {}
       volumes:
-        - name: hostpath-privileged
-          hostPath:
-            # directory location on host
-            path: /data/pv-mysql/
-            # this field is optional
-            type: DirectoryOrCreate
+      - name: mysql-persistent-storage-lab
+        persistentVolumeClaim:
+          claimName: mysql-pv-claim
