@@ -36,9 +36,12 @@ spec:
           privileged: true
         volumeMounts:
         - name: hostpath-privileged
-          mountPath: /data/pv-wordpress/
+          mountPath: /var/www/html
       securityContext: {}
       volumes:
         - name: hostpath-privileged
-          persistentVolumeClaim:
-            claimName: wordpress-pvc 
+          hostPath:
+            # directory location on host
+            path: /data/pv-wordpress/
+            # this field is optional
+            type: DirectoryOrCreate

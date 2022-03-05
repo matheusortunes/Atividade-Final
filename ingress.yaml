@@ -3,9 +3,6 @@ kind: Ingress
 metadata:
   name: wordpress-ingress
   namespace: projetocompass
-  annotations:
-    ingress.kubernetes.io/rewrite-target: /
-    kubernetes.io/ingress.class: "wordpress-svc"
 spec:
   rules:
   - host: projetofinal.compass.uol

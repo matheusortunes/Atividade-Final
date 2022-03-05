@@ -33,10 +33,13 @@ spec:
         securityContext:
           privileged: true 
         volumeMounts:
-        - name: hostpath-privileged
-          mountPath: /data/pv-mysql/
+        - name: local-storage
+          mountPath: /var/lib/mysql
       securityContext: {}
       volumes:
           - name: hostpath-privileged
-            persistentVolumeClaim:
-              claimName: mysql-pvc
+            hostPath:
+            # directory location on host
+            path: /data/pv-mysql/
+            # this field is optional
+            type: DirectoryOrCreate
