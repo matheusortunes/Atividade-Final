@@ -37,8 +37,8 @@ spec:
           mountPath: /var/lib/mysql
       securityContext: {}
       volumes:
-          - name: hostpath-privileged
-            hostPath:
+        - name: hostpath-privileged
+          hostPath:
             # directory location on host
             path: /data/pv-mysql/
             # this field is optional
