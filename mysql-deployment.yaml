@@ -31,7 +31,7 @@ spec:
         - containerPort: 3308
           name: mysql
         volumeMounts:
-        - name: mysql-persistent-storage-lab
+        - name: local-storage
           mountPath: /var/lib/mysql
       volumes:
           - name: local-storage
@@ -39,4 +39,4 @@ spec:
               # directory location on host
               path: /data/pv-wordpress/
               # this field is optional
-              type: DirectoryOrCreatem
+              type: DirectoryOrCreate

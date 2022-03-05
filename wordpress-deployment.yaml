@@ -33,12 +33,12 @@ spec:
         - containerPort: 80
           name: wordpress
         volumeMounts:
-        - name: wordpress-persistent-storage-lab
-          mountPath: /var/www/html
-      volumes:
         - name: local-storage
-          hostPath:
-            # directory location on host
-            path: /data/pv-wordpress/
-            # this field is optional
-            type: DirectoryOrCreate
+          mountPath: /var/www/html
+        volumes:
+          - name: local-storage
+            hostPath:
+              # directory location on host
+              path: /data/pv-wordpress/
+              # this field is optional
+              type: DirectoryOrCreate
