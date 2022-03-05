@@ -36,6 +36,9 @@ spec:
         - name: wordpress-persistent-storage-lab
           mountPath: /var/www/html
       volumes:
-      - name: wordpress-persistent-storage-lab
-        persistentVolumeClaim:
-          claimName: wordpress-pvc
+        - name: local-storage
+          hostPath:
+            # directory location on host
+            path: /data/pv-wordpress/
+            # this field is optional
+            type: DirectoryOrCreate
