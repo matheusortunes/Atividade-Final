@@ -33,7 +33,7 @@ spec:
         securityContext:
           privileged: true 
         volumeMounts:
-        - name: local-storage
+        - name: hostpath-privileged
           mountPath: /data/pv-mysql/
       securityContext: {}
       volumes:
