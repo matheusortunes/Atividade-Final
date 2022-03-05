@@ -35,10 +35,10 @@ spec:
         volumeMounts:
         - name: local-storage
           mountPath: /var/www/html
-        volumes:
-          - name: local-storage
-            hostPath:
-              # directory location on host
-              path: /data/pv-wordpress/
-              # this field is optional
-              type: DirectoryOrCreate
+      volumes:
+        - name: local-storage
+          hostPath:
+            # directory location on host
+            path: /data/pv-wordpress/
+            # this field is optional
+            type: DirectoryOrCreate
