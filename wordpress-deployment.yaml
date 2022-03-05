@@ -32,13 +32,13 @@ spec:
         ports:
         - containerPort: 80
           name: wordpress
+        securityContext:
+          privileged: true
         volumeMounts:
-        - name: local-storage
-          mountPath: /var/www/html
+        - name: hostpath-privileged
+          mountPath: /data/pv-wordpress/
+      securityContext: {}
       volumes:
-        - name: local-storage
-          hostPath:
-            # directory location on host
-            path: /data/pv-wordpress/
-            # this field is optional
-            type: DirectoryOrCreate
+        - name: hostpath-privileged
+          persistentVolumeClaim:
+            claimName: wordpress-pvc 

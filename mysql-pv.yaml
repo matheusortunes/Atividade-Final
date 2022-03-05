@@ -9,5 +9,6 @@ spec:
   accessModes:
   - ReadWriteOnce
   storageClassName: local-storage
+  persistentVolumeReclaimPolicy: Retain
   hostPath:
     path: /data/pv-mysql/
